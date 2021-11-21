@@ -1,0 +1,16 @@
+services:
+  hahn.applicatonprocess.web:
+    build:
+      context: C:\Users\Burak.Celik\source\Hahn.ApplicatonProcess.Application
+      dockerfile: Hahn.ApplicatonProcess.Web/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: hahnapplicatonprocessweb
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\Burak.Celik\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Burak.Celik\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  hahn.applicatonprocess.web:
+    image: hahnapplicatonprocessweb:dev
+    container_name: Hahn.ApplicatonProcess.Web
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Hahn.ApplicatonProcess.Web"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - C:\Users\Burak.Celik\source\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.Web:/app
+      - C:\Users\Burak.Celik\source\Hahn.ApplicatonProcess.Application:/src
+      - C:\Users\Burak.Celik\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\Burak.Celik\.nuget\packages\:/root/.nuget/packages:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net5.0/Hahn.ApplicatonProcess.Web.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
