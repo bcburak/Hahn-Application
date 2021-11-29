@@ -6,7 +6,7 @@ Fluent Validation added and used according to given rules.
 Getting data from coincap with Newtonsoft dll
 Swagger UI supported with Swashbuckle.
 
-Uncompleted missions because of time 
+Uncompleted missions because of time ;
 Logging issues
 Even supported few functions, unit testing is missing
 Response message structure is missing
