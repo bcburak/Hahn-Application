@@ -9,7 +9,6 @@ namespace Hahn.ApplicatonProcess.July2021.Data.Models
 {
     public class Users : BaseEntity
     {
-        public virtual Guid Id { get; set; }
         public virtual int Age { get; set; }
         public virtual string FirstName { get; set; }
         public virtual string LastName { get; set; }

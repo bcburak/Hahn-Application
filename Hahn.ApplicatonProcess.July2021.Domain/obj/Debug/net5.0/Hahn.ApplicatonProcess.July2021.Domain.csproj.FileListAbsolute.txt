@@ -24,7 +24,6 @@ C:\Users\Burak.Celik\source\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonPr
 C:\Users\Burak.Celik\source\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.July2021.Domain\obj\Debug\net5.0\Hahn.ApplicatonProcess.July2021.Domain.AssemblyInfoInputs.cache
 C:\Users\Burak.Celik\source\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.July2021.Domain\obj\Debug\net5.0\Hahn.ApplicatonProcess.July2021.Domain.AssemblyInfo.cs
 C:\Users\Burak.Celik\source\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.July2021.Domain\obj\Debug\net5.0\Hahn.ApplicatonProcess.July2021.Domain.csproj.CoreCompileInputs.cache
-C:\Users\Burak.Celik\source\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.July2021.Domain\obj\Debug\net5.0\Hahn.ApplicatonProcess.July2021.Domain.csproj.CopyComplete
 C:\Users\Burak.Celik\source\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.July2021.Domain\obj\Debug\net5.0\Hahn.ApplicatonProcess.July2021.Domain.dll
 C:\Users\Burak.Celik\source\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.July2021.Domain\obj\Debug\net5.0\ref\Hahn.ApplicatonProcess.July2021.Domain.dll
 C:\Users\Burak.Celik\source\Hahn.ApplicatonProcess.Application\Hahn.ApplicatonProcess.July2021.Domain\obj\Debug\net5.0\Hahn.ApplicatonProcess.July2021.Domain.pdb

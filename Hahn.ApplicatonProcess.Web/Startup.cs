@@ -12,6 +12,13 @@ using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.Swagger;
 using Microsoft.OpenApi.Models;
+using Hahn.ApplicatonProcess.July2021.Data.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+using FluentValidation.AspNetCore;
+using Hahn.ApplicatonProcess.July2021.Domain.Validator;
+using Hahn.ApplicatonProcess.July2021.Domain.Extensions;
+using Microsoft.Extensions.Logging;
+using Hahn.ApplicatonProcess.Web.Controllers;
 
 namespace Hahn.ApplicatonProcess.Web
 {
@@ -29,10 +36,16 @@ namespace Hahn.ApplicatonProcess.Web
         {
             services.AddRazorPages();
             services.AddMvcCore().AddApiExplorer();
+            services.AddDbContext<MainDbContext>(opt => opt.UseInMemoryDatabase("test"));
+            services.AddScoped<MainDbContext>();
+            services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserValidator>());
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
             });
+
+            services.AddCommonInfrastructure(Configuration);
+            //services.AddScoped(typeof(ILogger<HomeController>), typeof(ILogger<HomeController>));
 
         }
 
@@ -57,9 +70,15 @@ namespace Hahn.ApplicatonProcess.Web
 
             app.UseAuthorization();
 
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapRazorPages();
+            //});
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllers();
+                //endpoints.MapRazorPages();
             });
 
             app.UseSwagger();

@@ -8,7 +8,7 @@ namespace Hahn.ApplicatonProcess.July2021.Data.Infrastructure
 {
     public abstract class BaseEntity 
     {
-
+        public virtual int Id { get; set; }
         public virtual DateTime? DateCreated { get; set; }
         public virtual string UserCreated { get; set; }
         public virtual DateTime? DateModified { get; set; }

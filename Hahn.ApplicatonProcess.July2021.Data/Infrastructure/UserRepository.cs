@@ -17,17 +17,17 @@ namespace Hahn.ApplicatonProcess.July2021.Data.Infrastructure
         
         }
 
-        public override async Task<List<Users>> ListAllAsync()
-        {
-            try
-            {
-                return await _dbSet.ToListAsync();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "{Repo} All function error", typeof(UserRepository));
-                return new List<Users>();
-            }
-        }
+        //public override async Task<List<Users>> ListAllAsync()
+        //{
+        //    try
+        //    {
+        //        return await _dbSet.ToListAsync();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError(ex, "{Repo} All function error", typeof(UserRepository));
+        //        return new List<Users>();
+        //    }
+        //}
     }
 }
